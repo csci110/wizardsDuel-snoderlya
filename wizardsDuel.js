@@ -17,7 +17,6 @@ class Spell extends Sprite {
         // Compare images so Stranger's spells don't destroy each other.
         if (this.getImage() !== otherSprite.getImage()) {
             // Adjust mostly blank spell image to vertical center.
-            c
             if (verticalOffset < this.height / 2) {
                 game.removeSprite(this);
                 new Fireball(otherSprite);
