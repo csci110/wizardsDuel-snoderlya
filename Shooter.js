@@ -60,20 +60,16 @@ class Wizard extends Sprite {
         this.speed = 0;
     }
     handleSpacebar() {
-        let now = game.getTime();
-        if (now - this.spellCastTime >= 4) {
-            // reset the timer
-            this.spellCastTime = now;
-            let spell = new Spell;
-            spell.x = this.x;
-            spell.y = this.height + this.height;
-            spell.name = "A Ball Sent by Bob";
-            spell.setImage("ball.png");
-            spell.angle = 270;
-            this.playAnimation("down");
-        }
+        let spell = new Spell;
+        spell.x = this.x;
+        spell.y = this.height + this.height;
+        spell.name = "A Ball Sent by Bob";
+        spell.setImage("ball.png");
+        spell.angle = 270;
+        this.playAnimation("down");
     }
 }
+
 
 
 
